@@ -45,6 +45,14 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Autocorrect NLP",
+    tagline: "Spell Checking & Autocorrect",
+    description:
+      "Robust spell-checking and autocorrect tool built with Python and Flask. Core model based on Peter Norvig's probabilistic approach, trained on a massive text corpus for high accuracy. Features instant model loading via a JSON caching system for a fast, scalable deployed service.",
+    tech: ["Python", "Flask", "NLP", "Probabilistic Model", "JSON Cache"],
+    github: "https://github.com/keerthishree20/autocorrect-nlp",
+  },
+  {
     title: "RAG Chatbot",
     tagline: "Document Intelligence",
     description:
