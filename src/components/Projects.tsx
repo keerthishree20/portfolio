@@ -16,6 +16,51 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Tether",
+    tagline: "Durable Job Queue",
+    description:
+      "Job queue on Postgres that keeps its promises when workers die. Leases taken with SKIP LOCKED expire and are reclaimed, and idempotency claims commit with the acknowledgement so effects happen once. A chaos suite kills and freezes workers and restarts Postgres mid-run: 3,000 in-flight tasks, none lost.",
+    tech: ["Python", "PostgreSQL", "Docker", "Chaos testing"],
+    github: "https://github.com/keerthishree20/tether",
+    featured: true,
+  },
+  {
+    title: "Keel",
+    tagline: "Bytecode VM and Garbage Collector",
+    description:
+      "A small language with two engines held to one conformance suite: a tree-walking interpreter and a bytecode compiler with a stack VM that runs 1.2 to 3 times faster. Its mark-and-sweep collector is proven by a stress mode that collects before every allocation, and by tests that deliberately break it.",
+    tech: ["Python", "Compilers", "Virtual machines", "Garbage collection"],
+    github: "https://github.com/keerthishree20/keel",
+    featured: true,
+  },
+  {
+    title: "Wake",
+    tagline: "OpenTelemetry Trace Collector",
+    description:
+      "Accepts OTLP from real OpenTelemetry exporters, decoding protobuf by hand, and stitches spans across services while repairing clock skew and orphaned spans. Stores 14,600 spans a second sustained to SQLite and serves flame charts and flame graphs. Four profiling-driven changes nearly quadrupled storage throughput.",
+    tech: ["Python", "OpenTelemetry", "Protobuf", "SQLite"],
+    github: "https://github.com/keerthishree20/wake",
+    featured: true,
+  },
+  {
+    title: "Berth",
+    tagline: "Reverse Proxy and Load Balancer",
+    description:
+      "HTTP proxy on asyncio with consistent hashing, circuit breakers, health checks and connection pooling, benchmarked against nginx on pinned cores. nginx wins by 4.5 times, and the README says why. The benchmark also exposed a real bug: client disconnects were tripping breakers on healthy backends.",
+    tech: ["Python", "asyncio", "HTTP/1.1", "nginx"],
+    github: "https://github.com/keerthishree20/berth",
+    featured: true,
+  },
+  {
+    title: "Anchor",
+    tagline: "Crash-Safe Key-Value Store",
+    description:
+      "Append-only key-value store with hint files and compaction. Crash tests kill the writer mid-write and require the surviving keys to form an unbroken prefix. Measures what durability actually costs: 247 writes a second with an fsync on every record, against 199,000 without.",
+    tech: ["Python", "Storage engines", "Crash recovery"],
+    github: "https://github.com/keerthishree20/anchor",
+    featured: true,
+  },
+  {
     title: "Cutline",
     tagline: "Payment Fraud Risk Scorer",
     description:
@@ -25,6 +70,48 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Sextant",
+    tagline: "HNSW Vector Index",
+    description:
+      "Approximate nearest-neighbour index with the graph written from scratch, measured against brute force on random, clustered and real GloVe embeddings. Reaches 94% recall exploring 16 candidates on GloVe, with the honest finding that numpy brute force still wins at 20,000 vectors.",
+    tech: ["Python", "NumPy", "HNSW", "Vector search"],
+    github: "https://github.com/keerthishree20/sextant",
+  },
+  {
+    title: "Headway",
+    tagline: "Real-Time Transit Monitor",
+    description:
+      "Streams live GTFS-Realtime vehicle positions over a WebSocket and flags bus bunching, ghost vehicles and fleet anomalies against each route's own normal spacing rather than a timetable, so it works on any agency's feed. 81 tests.",
+    tech: ["FastAPI", "WebSockets", "Next.js", "GTFS-Realtime"],
+    github: "https://github.com/keerthishree20/headway",
+  },
+  {
+    title: "Cardsmith",
+    tagline: "Spaced Repetition",
+    description:
+      "Flashcards scheduled by SM-2 with cloze deletions, cross-deck search, cram mode and a progress dashboard. Runs entirely in the browser, with decks shareable as portable codes.",
+    tech: ["JavaScript", "SM-2", "Data visualisation"],
+    github: "https://github.com/keerthishree20/cardsmith",
+    live: "https://keerthishree20.github.io/cardsmith/",
+  },
+  {
+    title: "ShelfLife Sentinel",
+    tagline: "Retail Expiry Scanner",
+    description:
+      "Scan a barcode or photograph a date panel and the product is logged with its expiry and flagged fresh, expiring or expired. Writing 46 parser tests exposed four real date-reading bugs, including ISO dates read day-first, all fixed.",
+    tech: ["FastAPI", "Next.js", "Tesseract", "Gemini Vision"],
+    github: "https://github.com/keerthishree20/shelf-life-sentinel",
+  },
+  {
+    title: "Noise to Insights",
+    tagline: "Survey Text Analytics",
+    description:
+      "Turns a survey export into findings: open-text answers are clustered before any model sees them, then each theme is tested against respondent segments with chi-square, Cramér's V and Benjamini-Hochberg correction.",
+    tech: ["FastAPI", "scikit-learn", "DuckDB", "React"],
+    github: "https://github.com/keerthishree20/noise-to-insights",
+  },
+
+  {
     title: "RevCast AI",
     tagline: "Revenue Forecasting Engine",
     description:
@@ -32,7 +119,6 @@ const projects: Project[] = [
     tech: ["FastAPI", "Next.js 14", "Python", "Monte Carlo", "TypeScript"],
     github: "https://github.com/keerthishree20/RevCast-AI",
     live: "https://revcast-frontend.onrender.com",
-    featured: true,
   },
   {
     title: "Job Apply Assistant",
@@ -41,7 +127,6 @@ const projects: Project[] = [
       "End-to-end job application automation. Parses the posting, tailors the resume, drafts a cover letter and answers screening questions, then fills the form via Playwright and shows a screenshot — nothing is submitted without an explicit confirmation. Legal-status questions are deliberately left for the candidate rather than answered by the model.",
     tech: ["Groq", "Playwright", "FastAPI", "Next.js", "TypeScript"],
     github: "https://github.com/keerthishree20/job-apply-assistant",
-    featured: true,
   },
   {
     title: "Eternova",
@@ -51,7 +136,6 @@ const projects: Project[] = [
     tech: ["Next.js", "FastAPI", "SQLite", "JWT", "Framer Motion"],
     github: "https://github.com/keerthishree20/eternova",
     live: "https://eternova-peach.vercel.app",
-    featured: true,
   },
   {
     title: "ResumeCraft",
@@ -168,8 +252,8 @@ export default function Projects() {
             Selected <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted text-center max-w-lg mx-auto mb-16 text-sm">
-            End-to-end systems I&apos;ve designed, built, and deployed — spanning
-            AI/ML, full-stack development, and automation.
+            Systems I&apos;ve designed, built and measured — from storage engines,
+            language runtimes and distributed infrastructure to AI/ML products.
           </p>
         </ScrollReveal>
 
