@@ -16,6 +16,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Cutline",
+    tagline: "Payment Fraud Risk Scorer",
+    description:
+      "Fraud scorer whose decline threshold is chosen by minimising expected cost rather than maximising accuracy — the number that actually matters to a payments team. Trained on the 590,540-row IEEE-CIS dataset: PR-AUC 0.4263 against a 0.1325 baseline, calibration error 0.0043, shipping a threshold that respects a 1% decline ceiling.",
+    tech: ["Python", "scikit-learn", "FastAPI", "Next.js", "Docker"],
+    github: "https://github.com/keerthishree20/cutline",
+    featured: true,
+  },
+  {
     title: "RevCast AI",
     tagline: "Revenue Forecasting Engine",
     description:
@@ -29,8 +38,8 @@ const projects: Project[] = [
     title: "Job Apply Assistant",
     tagline: "AI-Powered Application Automation",
     description:
-      "End-to-end job application automation system. Parses job descriptions, tailors resumes using Gemini AI, generates targeted cover letters, and auto-submits applications through LinkedIn Easy Apply and ATS portals via Playwright.",
-    tech: ["Google Gemini", "Playwright", "Next.js", "TypeScript", "FastAPI"],
+      "End-to-end job application automation. Parses the posting, tailors the resume, drafts a cover letter and answers screening questions, then fills the form via Playwright and shows a screenshot — nothing is submitted without an explicit confirmation. Legal-status questions are deliberately left for the candidate rather than answered by the model.",
+    tech: ["Groq", "Playwright", "FastAPI", "Next.js", "TypeScript"],
     github: "https://github.com/keerthishree20/job-apply-assistant",
     featured: true,
   },
@@ -45,12 +54,28 @@ const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Autocorrect NLP",
-    tagline: "Spell Checking & Autocorrect",
+    title: "ResumeCraft",
+    tagline: "AI Resume Toolkit",
     description:
-      "Robust spell-checking and autocorrect tool built with Python and Flask. Core model based on Peter Norvig's probabilistic approach, trained on a massive text corpus for high accuracy. Features instant model loading via a JSON caching system for a fast, scalable deployed service.",
-    tech: ["Python", "Flask", "NLP", "Probabilistic Model", "JSON Cache"],
-    github: "https://github.com/keerthishree20/autocorrect-nlp",
+      "Turns one stored profile into resumes tailored to a specific role, then tells you where that resume falls short — ATS compatibility scoring, skill-gap analysis against a job description, LinkedIn headline rewriting and interview-question generation. Three PDF templates.",
+    tech: ["Next.js 16", "Google Gemini", "Prisma", "React PDF", "TypeScript"],
+    github: "https://github.com/keerthishree20/resume-craft",
+  },
+  {
+    title: "SpendLens",
+    tagline: "Receipt-Scanning Expense Tracker",
+    description:
+      "Snap a receipt and it becomes a categorised expense: Tesseract OCR extracts the text, an LLM parses it into structured JSON (merchant, items, total, date), and the dashboard tracks spending against per-category budgets.",
+    tech: ["FastAPI", "Tesseract OCR", "Groq", "Next.js", "Chart.js"],
+    github: "https://github.com/keerthishree20/smart-expense-tracker",
+  },
+  {
+    title: "AeroInspect",
+    tagline: "Aircraft Defect Detection",
+    description:
+      "Upload a photo of an aircraft component and get the defect type, severity, and an airworthiness verdict against FAA/EASA thresholds, with bounding boxes showing where. Custom-trained YOLOv8 running locally — no per-image API cost.",
+    tech: ["YOLOv8", "FastAPI", "Next.js 16", "SQLAlchemy", "Recharts"],
+    github: "https://github.com/keerthishree20/aerospace-inspection",
   },
   {
     title: "RAG Chatbot",
