@@ -1,5 +1,7 @@
 # Portfolio — KeerthiShree TS
 
+[![build](https://github.com/keerthishree20/portfolio/actions/workflows/build.yml/badge.svg)](https://github.com/keerthishree20/portfolio/actions/workflows/build.yml)
+
 Personal site: hero, about, skills, and a project grid linking to the public
 repos and live deployments.
 
