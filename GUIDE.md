@@ -5,6 +5,7 @@ and how to edit, check and deploy it. It is self-contained: you can paste it int
 questions about the project without sharing the repository.
 
 **Repository:** https://github.com/keerthishree20/portfolio
+**All projects:** https://github.com/keerthishree20
 
 ---
 
