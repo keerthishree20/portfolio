@@ -44,10 +44,17 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="/KeerthiShree_TS_Resume.pdf"
+            download="KeerthiShree_TS_Resume.pdf"
+            className="ml-2 text-[13px] px-4 py-1.5 rounded-full border border-white/[0.08] text-muted hover:text-foreground hover:border-white/[0.16] hover:bg-white/[0.04] transition-all duration-300"
+          >
+            Resume
+          </a>
+          <a
             href="https://github.com/keerthishree20"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-[13px] px-4 py-1.5 rounded-full border border-white/[0.08] text-muted hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
+            className="text-[13px] px-4 py-1.5 rounded-full border border-white/[0.08] text-muted hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
           >
             GitHub
           </a>
@@ -74,6 +81,14 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="/KeerthiShree_TS_Resume.pdf"
+            download="KeerthiShree_TS_Resume.pdf"
+            onClick={() => setMobileOpen(false)}
+            className="block py-3 text-sm text-muted hover:text-foreground transition-colors"
+          >
+            Resume
+          </a>
         </div>
       )}
     </nav>

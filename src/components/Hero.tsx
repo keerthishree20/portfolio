@@ -91,6 +91,15 @@ export default function Hero() {
           >
             Get in Touch
           </a>
+          {/* `download` names the saved file; the PDF lives in public/. */}
+          <a
+            href="/KeerthiShree_TS_Resume.pdf"
+            download="KeerthiShree_TS_Resume.pdf"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/[0.08] text-sm text-foreground hover:bg-white/[0.04] hover:border-white/[0.12] transition-all duration-300"
+          >
+            <FileText size={15} />
+            Resume
+          </a>
         </div>
 
         {/* Social */}
