@@ -22,8 +22,10 @@ export default function Hero() {
         <div className="mb-8 flex justify-center animate-fade-in-up">
           <div className="relative group">
             <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 opacity-40 blur-md group-hover:opacity-60 transition-opacity duration-500" />
+            {/* Served from public/: the old LinkedIn CDN link was a signed URL that
+                expired (403), so the photo silently disappeared from the live site. */}
             <Image
-              src="https://media.licdn.com/dms/image/v2/D5603AQE-I4dUpeCA3w/profile-displayphoto-scale_400_400/B56Zmk6kGtKIAg-/0/1759408441693?e=1783555200&v=beta&t=i3qgEh6L0cmx5Moy_me0ZKk9f0vz1bSiZOxQjKzUN0s"
+              src="/keerthishree.jpeg"
               alt="KeerthiShree TS"
               width={120}
               height={120}
