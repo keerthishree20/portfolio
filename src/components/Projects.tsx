@@ -61,13 +61,29 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Convoy",
+    tagline: "Raft Consensus and Chaos Simulator",
+    description:
+      "Raft written as a pure state machine, driven by a deterministic simulator so one seed replays one scenario exactly. A checker watches all five of Raft's safety properties after every delivered message, and planted bugs prove it works: a follower that truncates a committed entry is caught on seed 0.",
+    tech: ["Python", "Raft", "Distributed systems", "Chaos testing"],
+    github: "https://github.com/keerthishree20/convoy",
+    featured: true,
+  },
+  {
+    title: "AsliDeal",
+    tagline: "Is That Discount Real?",
+    description:
+      "Checks an Amazon.in \"% off\" against what other Indian stores charge for the same product today, using five SerpApi engines. Strict same-product matching is the hard part, so every rejected listing is shown with its reason, and the verdict says \"not enough data\" rather than guessing.",
+    tech: ["Python", "FastAPI", "SerpApi", "Chrome extension"],
+    github: "https://github.com/keerthishree20/aslideal",
+  },
+  {
     title: "Cutline",
     tagline: "Payment Fraud Risk Scorer",
     description:
       "Fraud scorer whose decline threshold is chosen by minimising expected cost rather than maximising accuracy — the number that actually matters to a payments team. Trained on the 590,540-row IEEE-CIS dataset: PR-AUC 0.4263 against a 0.1325 baseline, calibration error 0.0043, shipping a threshold that respects a 1% decline ceiling.",
     tech: ["Python", "scikit-learn", "FastAPI", "Next.js", "Docker"],
     github: "https://github.com/keerthishree20/cutline",
-    featured: true,
   },
   {
     title: "Sextant",
