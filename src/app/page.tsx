@@ -9,10 +9,17 @@ import { Spotlight } from "@/components/Effects";
 
 export default function Home() {
   return (
-    <div className="grain dot-grid">
+    <div className="grain">
+      {/* The sky: three drifting star layers behind everything. */}
+      <div className="stars" aria-hidden="true">
+        <i className="s1" />
+        <i className="s2" />
+        <i className="s3" />
+        <i className="shoot" />
+      </div>
       <Spotlight />
       <Navbar />
-      <main>
+      <main className="relative z-[1]">
         <Hero />
         <About />
         <Skills />
